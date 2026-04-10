@@ -1,3 +1,4 @@
+
 /* ========================================
    SKYJOURNEY TRAVEL AGENCY — STYLE.CSS
    Tema: Navy Blue & Sky Blue
@@ -913,83 +914,81 @@ footer h4 {
   font-size: 0.82rem;
 }
 
+/* =========================================
+   FIX MOBILE TOTAL — CARD TOUR
+   ========================================= */
 @media (max-width: 768px) {
 
-  /* ===== CARD CONTAINER ===== */
-  .cards-container {
-    flex-direction: column;
-    align-items: center;
-    padding: 0 0.5rem;
-  }
-
-  /* ===== CARD ===== */
+  /* Card utama */
   .tour-card {
-    width: 100%;
-    max-width: 100%;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: visible !important;
   }
 
-  /* ===== GAMBAR ===== */
+  /* Gambar */
   .card-img {
     height: 180px;
+    position: relative;
+    overflow: hidden;
   }
 
-  /* ===== ISI CARD ===== */
+  .card-img img {
+    position: absolute;
+    z-index: 1;
+  }
+
+  /* Body harus di atas gambar */
   .card-body {
+    position: relative !important;
+    z-index: 2 !important;
     padding: 1rem;
   }
 
+  /* Footer (HARGA + BUTTON) */
+  .card-footer {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.6rem !important;
+  }
+
+  /* Harga */
+  .price {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  .price-from {
+    font-size: 0.75rem;
+    color: #6b7a9a;
+  }
+
+  .price-num {
+    display: block !important;
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
+    color: #0a1628 !important;
+  }
+
+  /* Tombol */
+  .btn-card {
+    width: 100% !important;
+    text-align: center !important;
+    padding: 0.6rem !important;
+  }
+
+  /* Info kecil */
+  .card-info span {
+    font-size: 0.75rem;
+  }
+
+  /* Text biar muat */
   .card-body h3 {
     font-size: 1rem;
   }
 
   .card-body p {
     font-size: 0.82rem;
-  }
-
-  /* ===== INFO (hari & orang) ===== */
-  .card-info {
-    font-size: 0.75rem;
-  }
-
-  /* ===== BAGIAN HARGA + BUTTON (INI YANG PENTING) ===== */
-  .card-footer {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.6rem;
-  }
-
-  .price {
-    width: 100%;
-  }
-
-  .price-num {
-    font-size: 1rem;
-    font-weight: 700;
-  }
-
-  .btn-card {
-    width: 100%;
-    text-align: center;
-    padding: 0.6rem;
-  }
-
-  /* ===== BADGE ===== */
-  .card-badge {
-    font-size: 0.65rem;
-    padding: 0.2rem 0.6rem;
-  }
-
-  /* ===== HERO FIX ===== */
-  .hero-title {
-    font-size: 2rem;
-  }
-
-  .hero-desc {
-    font-size: 0.9rem;
-  }
-
-  /* ===== SECTION SPACING ===== */
-  .tour-section {
-    padding: 4rem 1rem;
   }
 }
