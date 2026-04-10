@@ -915,79 +915,66 @@ footer h4 {
 }
 
 /* ========================================
-   MOBILE FIX FINAL — DIJAMIN RAPI
+   FIX FINAL CARD LAYOUT (GRID)
    ======================================== */
-@media (max-width: 768px) {
 
-  /* Container jadi 1 kolom */
+.cards-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
+
+.tour-card {
+  width: 100%;
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.tour-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* ========================================
+   RESPONSIVE (WAJIB)
+   ======================================== */
+
+/* Tablet */
+@media (max-width: 1024px) {
   .cards-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    padding: 0 1rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* HP */
+@media (max-width: 768px) {
+  .cards-container {
+    grid-template-columns: 1fr;
   }
 
-  /* Card FULL & gak nabrak */
-  .tour-card {
-    width: 100%;
-    max-width: 100%;
-    flex: unset; /* PENTING */
-  }
-
-  /* Gambar biar proporsional */
-  .card-img {
-    height: 180px;
-  }
-
-  /* Body biar lega */
-  .card-body {
-    padding: 1rem;
-  }
-
-  /* Footer turun ke bawah */
   .card-footer {
     flex-direction: column;
     align-items: stretch;
     gap: 0.6rem;
   }
 
-  /* Harga */
-  .price {
-    text-align: left;
-  }
-
-  .price-num {
-    font-size: 1.1rem;
-  }
-
-  /* Tombol full */
   .btn-card {
     width: 100%;
   }
 
-  /* HERO biar gak kepotong */
   .hero-section {
     flex-direction: column;
     text-align: center;
     padding: 6rem 1rem 3rem;
   }
 
-  .hero-content {
-    max-width: 100%;
-  }
-
-  .hero-visual {
-    margin-top: 2rem;
-  }
-
-  /* NAV biar gak tabrakan */
   nav ul {
-    display: none; /* simple mobile */
+    display: none;
   }
-
-  .btn-cta {
-    padding: 0.5rem 1rem;
-    font-size: 0.8rem;
-  }
-
 }
