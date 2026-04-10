@@ -915,40 +915,61 @@ footer h4 {
 }
 
 /* ========================================
-   FIX HARGA TIDAK MUNCUL DI MOBILE
-   LETAKKAN PALING BAWAH CSS
+   MOBILE FIX — BIAR RAPI & PROPORSIONAL
    ======================================== */
 
 @media (max-width: 768px) {
 
-  .card-footer {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    gap: 0.5rem;
+  /* Card lebih lega */
+  .tour-card {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
   }
 
+  .card-body {
+    padding: 1rem;
+  }
+
+  /* Footer jadi stack */
+  .card-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.6rem;
+    margin-top: 0.8rem;
+  }
+
+  /* Harga */
   .price {
-    display: block !important;
-    width: 100% !important;
-    visibility: visible !important;
-    opacity: 1 !important;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
   }
 
   .price-from {
-    display: block !important;
+    font-size: 0.7rem;
+    color: #666;
   }
 
   .price-num {
-    display: block !important;
-    font-size: 1rem !important;
-    font-weight: bold !important;
-    color: black !important;
-    visibility: visible !important;
-    opacity: 1 !important;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #0a1628;
   }
 
+  /* Tombol full */
   .btn-card {
-    width: 100% !important;
+    width: 100%;
+    text-align: center;
+    padding: 0.6rem;
+    font-size: 0.85rem;
   }
+
+  /* Jarak antar card */
+  .cards-container {
+    gap: 1rem;
+    padding: 0 0.5rem;
+  }
+
 }
