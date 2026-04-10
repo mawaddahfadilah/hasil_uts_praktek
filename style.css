@@ -913,92 +913,83 @@ footer h4 {
   font-size: 0.82rem;
 }
 
-/* ========== MEDIA QUERY (Soal 2 - breakpoint 768px) ========== */
 @media (max-width: 768px) {
-  /* Header */
-  .header-inner {
-    padding: 0 1rem;
-  }
-  nav {
-    display: none;
-  }
-  .btn-cta {
-    font-size: 0.8rem;
-    padding: 0.5rem 1rem;
-  }
 
-  /* Hero */
-  .hero-section {
-    flex-direction: column;
-    padding: 6rem 1.5rem 3rem;
-    text-align: center;
-  }
-  .hero-content {
-    max-width: 100%;
-  }
-  .hero-desc {
-    margin: 0 auto 2rem;
-  }
-  .hero-btns {
-    justify-content: center;
-  }
-  .hero-stats {
-    justify-content: center;
-  }
-  .hero-visual {
-    min-height: 200px;
-    margin-top: 1rem;
-  }
-  .hero-globe {
-    font-size: 5rem;
-  }
-  .card-float {
-    display: none;
-  }
-
-  /* Cards — vertikal di mobile */
+  /* ===== CARD CONTAINER ===== */
   .cards-container {
     flex-direction: column;
     align-items: center;
+    padding: 0 0.5rem;
   }
+
+  /* ===== CARD ===== */
   .tour-card {
+    width: 100%;
     max-width: 100%;
-    width: 100%;
   }
 
-  /* Form */
-  .form-grid {
-    grid-template-columns: 1fr;
-  }
-  .form-wrapper {
-    padding: 1.5rem;
+  /* ===== GAMBAR ===== */
+  .card-img {
+    height: 180px;
   }
 
-  /* Artikel */
-  .add-form {
+  /* ===== ISI CARD ===== */
+  .card-body {
+    padding: 1rem;
+  }
+
+  .card-body h3 {
+    font-size: 1rem;
+  }
+
+  .card-body p {
+    font-size: 0.82rem;
+  }
+
+  /* ===== INFO (hari & orang) ===== */
+  .card-info {
+    font-size: 0.75rem;
+  }
+
+  /* ===== BAGIAN HARGA + BUTTON (INI YANG PENTING) ===== */
+  .card-footer {
     flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
   }
-  .btn-tambah {
+
+  .price {
     width: 100%;
   }
 
-  /* Footer */
-  .footer-inner {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+  .price-num {
+    font-size: 1rem;
+    font-weight: 700;
   }
-}
 
-@media (max-width: 480px) {
+  .btn-card {
+    width: 100%;
+    text-align: center;
+    padding: 0.6rem;
+  }
+
+  /* ===== BADGE ===== */
+  .card-badge {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.6rem;
+  }
+
+  /* ===== HERO FIX ===== */
   .hero-title {
     font-size: 2rem;
   }
-  .section-title {
-    font-size: 1.7rem;
+
+  .hero-desc {
+    font-size: 0.9rem;
   }
-  .btn-primary,
-  .btn-outline {
-    width: 100%;
-    text-align: center;
+
+  /* ===== SECTION SPACING ===== */
+  .tour-section {
+    padding: 4rem 1rem;
   }
 }
