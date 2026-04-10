@@ -973,3 +973,21 @@ footer h4 {
   }
 
 }
+@media (max-width: 768px) {
+
+  /* PAKSA JADI 1 KOLOM */
+  .cards-container {
+    display: flex;
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
+    align-items: stretch;
+  }
+
+  /* CARD FULL WIDTH */
+  .tour-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: none !important;
+  }
+
+}
