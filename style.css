@@ -915,12 +915,11 @@ footer h4 {
 }
 
 /* ========================================
-   MOBILE FIX FINAL — CLEAN & RAPI
+   MOBILE FIX FINAL — DIJAMIN RAPI
    ======================================== */
-
 @media (max-width: 768px) {
 
-  /* PAKSA 1 KOLOM */
+  /* Container jadi 1 kolom */
   .cards-container {
     display: flex;
     flex-direction: column;
@@ -928,60 +927,67 @@ footer h4 {
     padding: 0 1rem;
   }
 
-  /* CARD FULL WIDTH */
+  /* Card FULL & gak nabrak */
   .tour-card {
     width: 100%;
     max-width: 100%;
-    flex: none; /* 🔥 ini penting banget */
-    margin: 0;
+    flex: unset; /* PENTING */
   }
 
-  /* GAMBAR */
+  /* Gambar biar proporsional */
   .card-img {
     height: 180px;
   }
 
-  /* ISI CARD */
+  /* Body biar lega */
   .card-body {
     padding: 1rem;
   }
 
-  /* FOOTER JADI KE BAWAH */
+  /* Footer turun ke bawah */
   .card-footer {
     flex-direction: column;
     align-items: stretch;
     gap: 0.6rem;
   }
 
-  /* HARGA */
+  /* Harga */
   .price {
-    display: flex;
-    flex-direction: column;
+    text-align: left;
   }
 
-  /* BUTTON FULL */
+  .price-num {
+    font-size: 1.1rem;
+  }
+
+  /* Tombol full */
   .btn-card {
     width: 100%;
   }
 
-  /* HERO FIX */
+  /* HERO biar gak kepotong */
   .hero-section {
     flex-direction: column;
     text-align: center;
+    padding: 6rem 1rem 3rem;
+  }
+
+  .hero-content {
+    max-width: 100%;
   }
 
   .hero-visual {
     margin-top: 2rem;
   }
 
-  /* NAV HIDE (BIAR GA BERANTAKAN) */
+  /* NAV biar gak tabrakan */
   nav ul {
-    display: none;
+    display: none; /* simple mobile */
   }
 
-  /* HEADER SPACE */
-  main {
-    margin-top: 80px;
+  .btn-cta {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
   }
 
 }
