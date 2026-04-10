@@ -40,6 +40,7 @@ body {
   background: var(--white);
   color: var(--navy);
   overflow-x: hidden;
+  width: 100%;
 }
 
 /* ========== HEADER ========== */
@@ -265,6 +266,7 @@ nav ul {
 .stat {
   text-align: left;
 }
+
 .stat-num {
   display: block;
   font-family: 'Playfair Display', serif;
@@ -272,11 +274,13 @@ nav ul {
   font-weight: 700;
   color: var(--white);
 }
+
 .stat-label {
   font-size: 0.8rem;
   color: var(--sky);
   letter-spacing: 0.05em;
 }
+
 .stat-divider {
   width: 1px;
   height: 40px;
@@ -300,13 +304,8 @@ nav ul {
 }
 
 @keyframes float {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-16px);
-  }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-16px); }
 }
 
 .card-float {
@@ -323,16 +322,19 @@ nav ul {
   font-weight: 500;
   animation: float 4s ease-in-out infinite;
 }
+
 .card-float small {
   color: var(--sky-light);
   font-size: 0.75rem;
 }
+
 .card1 {
   top: 15%;
   left: 5%;
   animation-delay: 0.8s;
   font-size: 1.3rem;
 }
+
 .card2 {
   bottom: 20%;
   right: 5%;
@@ -376,19 +378,18 @@ nav ul {
   line-height: 1.75;
 }
 
-/* ---- FLEXBOX CARDS (Soal 2) ---- */
+/* ---- FLEXBOX CARDS ---- */
 .cards-container {
   max-width: 1200px;
   margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
-  justify-content: center;
+  padding: 0 1rem;
 }
 
 .tour-card {
-  flex: 1 1 300px;
-  max-width: 320px;
+  width: 100%;
   background: var(--white);
   border-radius: var(--radius);
   overflow: hidden;
@@ -417,8 +418,8 @@ nav ul {
   align-items: center;
   justify-content: center;
   font-size: 4rem;
-  position: relative; /* ← tambah ini */
-  overflow: hidden; /* ← tambah ini */
+  position: relative;
+  overflow: hidden;
 }
 
 .card-img img {
@@ -426,9 +427,9 @@ nav ul {
   height: 100%;
   object-fit: cover;
   display: block;
-  position: absolute; /* ← tambah ini */
-  top: 0; /* ← tambah ini */
-  left: 0; /* ← tambah ini */
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .card-badge {
@@ -495,11 +496,13 @@ nav ul {
 .price {
   flex: 1;
 }
+
 .price-from {
   display: block;
   font-size: 0.7rem;
   color: var(--gray);
 }
+
 .price-num {
   font-size: 0.95rem;
   font-weight: 700;
@@ -547,12 +550,15 @@ nav ul {
 .section-header.light .section-tag {
   color: var(--sky-light);
 }
+
 .section-title.white {
   color: var(--white);
 }
+
 .highlight-light {
   color: var(--sky);
 }
+
 .section-desc.light-text {
   color: var(--gray-light);
 }
@@ -569,7 +575,7 @@ nav ul {
   z-index: 1;
 }
 
-/* ---- FORM GRID (Soal 3) ---- */
+/* ---- FORM GRID ---- */
 .form-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -726,7 +732,7 @@ textarea {
   text-align: center;
 }
 
-/* ========== ARTIKEL SECTION (Soal 5) ========== */
+/* ========== ARTIKEL SECTION ========== */
 .artikel-section {
   padding: 6rem 2rem;
   background: var(--white);
@@ -802,14 +808,8 @@ textarea {
 }
 
 @keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
 .artikel-item:hover {
@@ -886,15 +886,18 @@ footer h4 {
 .footer-links ul {
   list-style: none;
 }
+
 .footer-links li {
   margin-bottom: 0.6rem;
 }
+
 .footer-links a {
   color: var(--gray-light);
   text-decoration: none;
   font-size: 0.88rem;
   transition: var(--transition);
 }
+
 .footer-links a:hover {
   color: var(--sky);
 }
@@ -914,67 +917,109 @@ footer h4 {
   font-size: 0.82rem;
 }
 
-/* ========================================
-   FIX FINAL CARD LAYOUT (GRID)
-   ======================================== */
-
-.cards-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  padding: 0 1rem;
-}
-
-.tour-card {
-  width: 100%;
-  background: var(--white);
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: var(--shadow);
-  transition: var(--transition);
-}
-
-.tour-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-hover);
-}
-
-/* ========================================
-   RESPONSIVE (WAJIB)
-   ======================================== */
-
-/* Tablet */
+/* ========== MEDIA QUERY TABLET ========== */
 @media (max-width: 1024px) {
   .cards-container {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* HP */
+/* ========== MEDIA QUERY HP (768px) ========== */
 @media (max-width: 768px) {
-  .cards-container {
-    grid-template-columns: 1fr;
+  /* Header */
+  .header-inner {
+    padding: 0 1rem;
+  }
+  nav {
+    display: none;
+  }
+  .btn-cta {
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
   }
 
+  /* Hero */
+  .hero-section {
+    flex-direction: column;
+    padding: 6rem 1rem 3rem;
+    text-align: center;
+  }
+  .hero-content,
+  .hero-section > .hero-content {
+    max-width: 100%;
+    width: 100%;
+    padding: 0;
+  }
+  .hero-desc {
+    margin: 0 auto 2rem;
+  }
+  .hero-btns {
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  .btn-primary,
+  .btn-outline {
+    width: 100%;
+    text-align: center;
+  }
+  .hero-stats {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .hero-visual {
+    display: none;
+  }
+  .card-float {
+    display: none;
+  }
+
+  /* Cards */
+  .cards-container {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+
+  /* Card footer */
   .card-footer {
     flex-direction: column;
     align-items: stretch;
     gap: 0.6rem;
   }
-
   .btn-card {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Form */
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .form-wrapper {
+    padding: 1.5rem 1rem;
+  }
+
+  /* Artikel */
+  .add-form {
+    flex-direction: column;
+  }
+  .btn-tambah {
     width: 100%;
   }
 
-  .hero-section {
-    flex-direction: column;
-    text-align: center;
-    padding: 6rem 1rem 3rem;
+  /* Footer */
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
+}
 
-  nav ul {
-    display: none;
+/* ========== MEDIA QUERY KECIL (480px) ========== */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  .section-title {
+    font-size: 1.7rem;
   }
 }
