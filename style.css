@@ -914,81 +914,41 @@ footer h4 {
   font-size: 0.82rem;
 }
 
-/* =========================================
-   FIX MOBILE TOTAL — CARD TOUR
-   ========================================= */
+/* ========================================
+   FIX HARGA TIDAK MUNCUL DI MOBILE
+   LETAKKAN PALING BAWAH CSS
+   ======================================== */
+
 @media (max-width: 768px) {
 
-  /* Card utama */
-  .tour-card {
-    width: 100% !important;
-    max-width: 100% !important;
-    overflow: visible !important;
-  }
-
-  /* Gambar */
-  .card-img {
-    height: 180px;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .card-img img {
-    position: absolute;
-    z-index: 1;
-  }
-
-  /* Body harus di atas gambar */
-  .card-body {
-    position: relative !important;
-    z-index: 2 !important;
-    padding: 1rem;
-  }
-
-  /* Footer (HARGA + BUTTON) */
   .card-footer {
     display: flex !important;
     flex-direction: column !important;
     align-items: flex-start !important;
-    gap: 0.6rem !important;
+    gap: 0.5rem;
   }
 
-  /* Harga */
   .price {
     display: block !important;
     width: 100% !important;
+    visibility: visible !important;
+    opacity: 1 !important;
   }
 
   .price-from {
-    font-size: 0.75rem;
-    color: #6b7a9a;
+    display: block !important;
   }
 
   .price-num {
     display: block !important;
-    font-size: 1.1rem !important;
-    font-weight: 700 !important;
-    color: #0a1628 !important;
+    font-size: 1rem !important;
+    font-weight: bold !important;
+    color: black !important;
+    visibility: visible !important;
+    opacity: 1 !important;
   }
 
-  /* Tombol */
   .btn-card {
     width: 100% !important;
-    text-align: center !important;
-    padding: 0.6rem !important;
-  }
-
-  /* Info kecil */
-  .card-info span {
-    font-size: 0.75rem;
-  }
-
-  /* Text biar muat */
-  .card-body h3 {
-    font-size: 1rem;
-  }
-
-  .card-body p {
-    font-size: 0.82rem;
   }
 }
